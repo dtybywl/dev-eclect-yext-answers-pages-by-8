@@ -12,7 +12,7 @@
     body {
       margin: 0 0;
       padding: 0 0;
-      background-color: #040406;
+      background-color: SeaGreen;
     }
     header, footer {
       height: 200px;
@@ -70,7 +70,6 @@
     }
   </style>
   <script src="https://assets.sitescdn.net/answers/v1/answers.min.js"></script>
-  <!-- <script src="tmplNoResults.js"></script> -->
 </head>
 
 <body>
@@ -93,169 +92,5 @@
 
   </footer>
 </body>
-
-<!-- <script>
-  function initAnswers() {
-    ANSWERS.init({
-      apiKey: "a1fffec1429574f139d4515d36121c49",
-      experienceKey: "zendesk-answer",
-      businessId: "3732884",
-      experienceVersion: "PRODUCTION",
-      debug: true,
-      locale: "ja",
-      verticalPages: [{
-          label: "すべて",
-          url: "index.html",
-          isFirst: true,
-          isActive: true,
-          icon: "star"
-        },
-        {
-          label: "ヘルプ",
-          url: "helps.html",
-          verticalKey: "helps",
-          icon: "support",
-          isFirst: false,
-          isActive: false,
-          hideInNavigation: false
-        },
-        {
-          label: "催し物",
-          url: "events.html",
-          verticalKey: "events",
-          icon: "calendar",
-          isFirst: false,
-          isActive: false,
-          hideInNavigation: false
-        },
-        {
-          label: "場所",
-          url: "locations.html",
-          verticalKey: "locations",
-          icon: "office",
-          isFirst: false,
-          isActive: false,
-          hideInNavigation: false
-        }
-      ],
-      onReady: function () {
-        this.addComponent("SearchBar", {
-          container: ".search-bar",
-          placeholderText: "知りたいことを聞かせてね 😘",
-          allowEmptySearch: true
-        });
-        this.addComponent("Navigation", {
-          container: ".navigation",
-          mobileOverflowBehavior: "COLLAPSE",
-          ariaLabel: "Search Page Navigation",
-          overflowLabel: "More",
-          overflowIcon: null
-        });
-        this.addComponent("SpellCheck", {
-          container: ".spell-check"
-        });
-        this.addComponent("UniversalResults", {
-          container: ".universal-results",
-          config: {
-            helps: {
-              icon: "support",
-              card: {
-                cardType: "Standard",
-                dataMappings: {
-                  title: (item) => item.name,
-                  subtitle: "",
-                  details: (item) => item.body,
-                  image: (item) =>
-                    !item.c_advisorPhoto ? null : item.c_advisorPhoto.image.url,
-                  url: (item) => item.landingPageUrl,
-                  showMoreLimit: 100,
-                  showMoreText: "もっと",
-                  showLessText: "少なく",
-                  target: "_blank"
-                },
-                callsToAction: () => [],
-              },
-            },
-            events: {
-              icon: "calendar",
-              card: {
-                cardType: "Standard",
-                dataMappings: {
-                  title: (item) => `${item.name}`,
-                  subtitle: (item) => `時間: ${item.time.start}- | 場所: ${item.venueName} (${item.address.region}${item.address.city}${item.address.line1} ${item.address.line2})`,
-                  details: (item) => item.body,
-                  image: (item) => item.photoGallery ? item.photoGallery[0].image.url : "",
-                  url: (item) => item.landingPageUrl,
-                  showMoreLimit: 100,
-                  showMoreText: "もっと",
-                  showLessText: "少なく",
-                  target: "_blank"
-                },
-                callsToAction: [
-                  {
-                    label: "Get Ticket",
-                    icon: "calendar",
-                    url: (item) => `tel:${item.c_primaryCTA.link}`,
-                    analyticsEventType: "CTA_CLICK",
-                    target: "_self",
-                  },
-                  {
-                    label: "Call Us",
-                    icon: "phone",
-                    url: (item) => `tel:${item.c_secondaryCTA.link}`,
-                    analyticsEventType: "TAP_TO_CALL",
-                  },
-                ],
-              },
-            },
-            locations: {
-              icon: "office",
-              card: {
-                cardType: "Standard",
-                dataMappings: {
-                  title: (item) => item.name,
-                  subtitle: (item) => `${item.address.region}${item.address.city}${item.address.line1} ${item.address.line2}`,
-                  details: (item) => item.description,
-                  image: (item) => item.photoGallery ? item.photoGallery[0].image.url : "",
-                  url: (item) => item.landingPageUrl,
-                  showMoreLimit: 100,
-                  showMoreText: "もっと",
-                  showLessText: "少なく",
-                  target: "_blank"
-                },
-                callsToAction: [
-                  {
-                    label: "Email Us",
-                    icon: "calendar",
-                    url: (item) => `mailto:${item.emails}`,
-                    analyticsEventType: "CTA_CLICK",
-                    target: "_self",
-                  },
-                  {
-                    label: "Call Us",
-                    icon: "phone",
-                    url: (item) => `tel:${item.mainPhone}`,
-                    analyticsEventType: "TAP_TO_CALL",
-                  },
-                ],
-              },
-            },
-          },
-          onMount: function(data) {
-            console.log(data);
-          }
-        });
-        // this.addComponent("Pagination", {
-        //   container: ".pagination"
-        // });
-        this.addComponent("LocationBias", {
-          container: ".location-bias"
-        });
-      }
-    });
-  }
-</script> -->
-
-<!-- <script src="https://assets.sitescdn.net/answers/v1.5/answers.min.js" onload="ANSWERS.domReady(initAnswers)" async defer></script> -->
 
 </html>
